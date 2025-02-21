@@ -1,0 +1,108 @@
+/* Basic reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Background Image */
+.backim {
+    background-image: url('https://imageio.forbes.com/specials-images/imageserve/6680ea836df1d482c9aa5386/UFC-303--Pereira-v-Prochazka-2/0x0.jpg?format=jpg&crop=1511,851,x0,y140,safe&width=960');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    z-index: -2;
+}
+
+/* General Input Style */
+input[type="number"] {
+    width: 80%;
+    max-width: 300px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* Button Style */
+#addLegButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Total Payout Display */
+.total-payout {
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    /* Adjust text sizes and layout for tablets and mobile */
+    .bet-input, .leg-input, .total-payout {
+        width: 90%; /* Increase input width */
+        font-size: 16px;
+    }
+
+    #addLegButton {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    /* Center everything vertically */
+    .bet-container, .add-leg-container, .total-payout {
+        position: relative;
+        top: auto;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+
+    /* Smaller padding for mobile screens */
+    .bet-container, .add-leg-container, .total-payout {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjust text sizes and layout for smaller phones */
+    .bet-input, .leg-input, .total-payout {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #addLegButton {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
