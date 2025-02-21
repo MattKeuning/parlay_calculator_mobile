@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parlay Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="backim"></div>
+    <div class="bet-container">
+        <input type="number" id="betInput" class="bet-input" placeholder="Your Bet Amount" oninput="updateBet()">
+    </div>
+    <div class="add-leg-container">
+        <input type="number" id="legInput" class="leg-input" placeholder="Add Leg" oninput="updateLeg()">
+        <button id="addLegButton" onclick="addLeg()">Add Leg</button>
+    </div>
+    <div class="total-payout">
+        <p>Total Payout: $<span id="totalPayout">0</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
